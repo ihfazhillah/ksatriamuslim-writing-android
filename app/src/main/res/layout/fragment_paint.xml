@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".fragments.PaintFragment">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="SAKINAH"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/text"
+            app:layout_constraintBottom_toTopOf="@id/CharToWrite"
+            />
+
+        <TextView
+            android:id="@+id/CharToWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textColor="@color/black"
+            android:textSize="150sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/paintView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/paintView"
+            app:layout_constraintTop_toTopOf="@id/paintView"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="25dp"
+            />
+
+        <com.ihfazh.ksmwriting.views.PaintView
+            android:id="@+id/paintView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tulis_disini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tulis Disini"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/paintView"
+            app:layout_constraintEnd_toEndOf="@id/paintView"
+            app:layout_constraintStart_toStartOf="@id/paintView"
+            app:layout_constraintTop_toTopOf="@id/paintView" />
+
+
+        <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:tooltipText="Hapus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_yes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_baseline_check_24"
+            android:tooltipText="Ok"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/MyAnim"
+            android:visibility="invisible"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
